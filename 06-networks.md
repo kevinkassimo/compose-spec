@@ -29,8 +29,8 @@ networks:
 driver is not available on the platform.
 
 ```yml
-volumes:
-  db-data:
+networks:
+  mynet1:
     driver: overlay
 ```
 
@@ -78,8 +78,8 @@ networks:
 driver-dependent - consult the driver's documentation for more information. Optional.
 
 ```yml
-volumes:
-  db-data:
+networks:
+  mynet1:
     driver_opts:
       foo: "bar"
       baz: 1
@@ -144,8 +144,8 @@ Add metadata to containers using Labels. Can use either an array or a dictionary
 Users should use reverse-DNS notation to prevent labels from conflicting with those used by other software.
 
 ```yml
-volumes:
-  db-data:
+networks:
+  mynet1:
     labels:
       com.example.description: "Financial transaction network"
       com.example.department: "Finance"
@@ -153,8 +153,8 @@ volumes:
 ```
 
 ```yml
-volumes:
-  db-data:
+networks:
+  mynet1:
     labels:
       - "com.example.description=Financial transaction network"
       - "com.example.department=Finance"
